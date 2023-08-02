@@ -1,0 +1,10 @@
+.product-image {      
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+} 
+
+.product-item {
+  border: 1px solid #33B5E5;
+}
+

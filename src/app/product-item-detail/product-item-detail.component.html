@@ -1,0 +1,11 @@
+<div class="detail-container" *ngIf="product">
+    <img [src]="product.url" alt="Product image">
+    <div class="detail-item">
+        <h2>{{product.name}}</h2>
+        <p>{{product.description}}</p>
+        <p>{{'$' + product.price}}</p>
+        <app-cart [product]="product" (productAdded)="onProductAdded($event)"></app-cart>
+        <button (click)="goToProductList()">Back to Product List</button>
+    </div>
+</div>
+

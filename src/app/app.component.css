@@ -1,0 +1,18 @@
+.header {
+    margin-bottom: 20px;  
+    text-align: center;
+    background: #33B5E5;
+    color: #fff;
+    padding: 12px;
+  }
+
+.header a:not(:last-child) {
+    margin-right: 10px;
+}
+
+.cart-icon {
+  /* Adjust these styles as needed */
+  height: 20px;
+  width: 20px;
+  margin-left: 5px;
+}

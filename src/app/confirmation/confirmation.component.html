@@ -1,0 +1,43 @@
+<div class="page-container">
+    <div class="items-wrapper">
+        <div class="items-container">
+            <div *ngFor="let item of cartItems" class="item-box">
+                <img [src]="item.product.url" alt="Product image">
+                <div class="item-details">
+                    <p>Name: {{item.product.name}}</p>
+                    <p>Price: ${{item.product.price}}</p>
+                    <p>Amount: {{item.quantity}}</p>
+
+                    <button (click)="removeItem(item.product.id)">Remove</button>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="cartItems.length > 0" class="total-cost">
+            <p>Total cost: ${{calculateTotalCost()}}</p>
+        </div>
+    </div>
+    <div class="form-container">
+        <form #form="ngForm" (ngSubmit)="onSubmit()">
+            <label>Full Name</label>
+            <input type="text" placeholder="(minimum 3 characters)" [(ngModel)]="fullName" name="fullName" required minlength="3" #fullNameInput="ngModel" (ngModelChange)="onFullNameChange($event)">
+            <div *ngIf="fullNameInput.invalid && fullNameInput.touched" class="error-message">
+                Full Name is required and should be at least 3 characters long
+            </div>
+            
+            <label>Address</label>
+            <input type="text" placeholder="(minimum 6 characters)" [(ngModel)]="address" name="address"  required minlength="6" #addressInput="ngModel" (ngModelChange)="onAddressChange($event)">
+            <div *ngIf="addressInput.invalid && addressInput.touched" class="error-message">
+                Address is required and should be at least 6 characters long
+            </div>
+            
+            <label>Credit card number</label>
+            <input type="text" placeholder="(16-digit number)" [(ngModel)]="creditCardNumber" name="creditCardNumber" required minlength="16" maxlength="16" pattern="\d{16}" #creditCardInput="ngModel" (ngModelChange)="onCreditCardNumberChange($event)">
+            <div *ngIf="creditCardInput.invalid && creditCardInput.touched" class="error-message">
+                Please provide 16 digits from your credit card
+            </div>
+
+
+            <button [disabled]="form.invalid">Submit</button>
+        </form>
+    </div>
+</div>
