@@ -1,12 +1,14 @@
-<div class="product-item">
-    <a [routerLink]="['/details', product.id]">
-        <img class="product-image" src={{product.url}} alt="ProductImage">
-    </a>
-</div>
-<div class="text-center">
-    <p class="fw-bolder">{{ product.name }}</p>
-    <p>{{ '$' + product.price }}</p>
-</div>
-<div>
-    <app-cart [product]="product"></app-cart>
+<div class="card">
+    <div class="product-item">
+        <a [routerLink]="['/details', product.id]">
+            <img class="product-image" src={{product.url}} alt="ProductImage">
+        </a>
+    </div>
+    <div class="text-center">
+        <p class="fw-bolder">{{ product.name }}</p>
+        <p>{{ '$' + product.price }}</p>
+    </div>
+    <div>
+        <app-cart [product]="product"></app-cart>
+    </div>
 </div>
