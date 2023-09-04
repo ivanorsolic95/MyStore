@@ -1,5 +1,5 @@
 <form #cartForm="ngForm" (ngSubmit)="onSubmit()">
-    <select [(ngModel)]="quantity" name="quantity" (ngModelChange)="validateQuantity($event)">
+    <select class="custom-select" [(ngModel)]="quantity" name="quantity" (ngModelChange)="validateQuantity($event)">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
