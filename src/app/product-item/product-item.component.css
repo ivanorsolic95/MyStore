@@ -30,3 +30,10 @@
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   transform: scale(1.05);
 }
+
+.app-cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
