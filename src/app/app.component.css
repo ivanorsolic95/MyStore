@@ -1,18 +1,32 @@
 .header {
-    margin-bottom: 20px;  
-    text-align: center;
-    background: #33B5E5;
-    color: #fff;
-    padding: 12px;
-  }
-
-.header a:not(:last-child) {
-    margin-right: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(33, 98, 116);
+  padding: 20px;
+  color: white;
 }
 
-.cart-icon {
-  /* Adjust these styles as needed */
-  height: 20px;
-  width: 20px;
-  margin-left: 5px;
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-link {
+  background-color: #333;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-link:hover {
+  background-color: #555;
+  color: #fff;
 }
