@@ -3,6 +3,7 @@ import { CartItem } from 'src/models/CartItem';
 import { CartService } from 'src/service/cart.service';
 import { ConfirmationService } from 'src/service/confirmation.service';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-confirmation',
@@ -17,7 +18,8 @@ export class ConfirmationComponent implements OnInit {
 
   constructor (private cartService: CartService,
                private confirmationService: ConfirmationService,
-               private router: Router) {}
+               private router: Router,
+               private toastr: ToastrService) {}
 
   ngOnInit(): void {
     this.cartService.cart.subscribe(items => this.cartItems = items)
@@ -30,7 +32,7 @@ export class ConfirmationComponent implements OnInit {
 
   removeItem(productId: number): void {
     this.cartService.removeFromCart(productId);
-    window.alert('Product removed from cart!');
+    this.toastr.warning('Product removed from the cart!');
   }
 
 
