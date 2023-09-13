@@ -163,13 +163,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 70vh;  /* Adjust this value based on your layout */
+    height: 70vh;  
     text-align: center; 
     font-family: Arial, sans-serif;
 }
 
 .empty-cart-img {
-    max-width: 300px; /* Adjust based on your image and preference */
+    max-width: 300px; 
     margin-bottom: 20px;
 }
 
@@ -188,8 +188,6 @@
     border-radius: 5px;
     text-decoration: none;
     transition: background-color 0.3s;
-
-    /* Optional: Add a hover state for better interactivity */
 }
 
 .shop-link:hover {
