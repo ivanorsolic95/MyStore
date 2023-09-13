@@ -53,6 +53,7 @@ export class CartComponent implements OnInit {
       const cartItem = new CartItem(this.product, this.quantity, totalPrice);
       this.cartService.addToCart(cartItem);
       this.productAdded.emit(this.product);
+      this.quantity = 1;
     }
   }
 
