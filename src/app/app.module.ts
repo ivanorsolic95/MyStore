@@ -5,6 +5,7 @@ import { ProductService } from 'src/service/product.service';
 import { CartService } from 'src/service/cart.service';
 import { FormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -27,12 +28,13 @@ import { ConfirmationMessageComponent } from './confirmation-message/confirmatio
     ConfirmationMessageComponent
   ],
   imports: [
+    BrowserAnimationsModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
     ToastrModule.forRoot({
-      timeOut: 3000,
+      timeOut: 1000,
       positionClass: 'toast-bottom-right',
       preventDuplicates: true,
     }),
