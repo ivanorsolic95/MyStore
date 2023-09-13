@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProductService } from 'src/service/product.service';
 import { CartService } from 'src/service/cart.service';
 import { FormsModule } from '@angular/forms';
+import { ToastrModule } from 'ngx-toastr';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -29,7 +30,12 @@ import { ConfirmationMessageComponent } from './confirmation-message/confirmatio
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ToastrModule.forRoot({
+      timeOut: 3000,
+      positionClass: 'toast-bottom-right',
+      preventDuplicates: true,
+    }),
   ],
   providers: [ProductService, CartService],
   bootstrap: [AppComponent]
