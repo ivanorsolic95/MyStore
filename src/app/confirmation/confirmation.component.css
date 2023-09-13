@@ -108,3 +108,24 @@
 .error-message {
     color: red;
 }
+
+.item-details button {
+    padding: 8px 12px; 
+    background-color: #f44336; 
+    color: #ffffff; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 14px; 
+    transition: background-color 0.3s; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.item-details button:hover {
+    background-color: #e53935; 
+}
+
+.item-details button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(244, 67, 54, 0.5); 
+}
