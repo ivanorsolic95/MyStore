@@ -1,3 +1,9 @@
+<div *ngIf="cartItems.length === 0" class="empty-cart">
+    <img src="assets/empty_cart.png" alt="Empty Shopping Cart" class="empty-cart-img">
+    <p class="empty-cart-message">Your shopping cart is empty.</p>
+    <a href="/" class="shop-link">Continue Shopping</a>
+</div>
+
 <div class="page-container">
     <div class="items-wrapper">
         <div class="items-container">
@@ -16,28 +22,29 @@
             <p>Total cost: ${{calculateTotalCost()}}</p>
         </div>
     </div>
-    <div class="form-container">
-        <form #form="ngForm" (ngSubmit)="onSubmit()">
-            <label>Full Name</label>
-            <input type="text" placeholder="(minimum 3 characters)" [(ngModel)]="fullName" name="fullName" required minlength="3" #fullNameInput="ngModel" (ngModelChange)="onFullNameChange($event)">
-            <div *ngIf="fullNameInput.invalid && fullNameInput.touched" class="error-message">
-                Full Name is required and should be at least 3 characters long
-            </div>
-            
-            <label>Address</label>
-            <input type="text" placeholder="(minimum 6 characters)" [(ngModel)]="address" name="address"  required minlength="6" #addressInput="ngModel" (ngModelChange)="onAddressChange($event)">
-            <div *ngIf="addressInput.invalid && addressInput.touched" class="error-message">
-                Address is required and should be at least 6 characters long
-            </div>
-            
-            <label>Credit card number</label>
-            <input type="text" placeholder="(16-digit number)" [(ngModel)]="creditCardNumber" name="creditCardNumber" required minlength="16" maxlength="16" pattern="\d{16}" #creditCardInput="ngModel" (ngModelChange)="onCreditCardNumberChange($event)">
-            <div *ngIf="creditCardInput.invalid && creditCardInput.touched" class="error-message">
-                Please provide 16 digits from your credit card
-            </div>
+    
+        <div class="form-container" *ngIf="cartItems.length > 0">
+            <form #form="ngForm" (ngSubmit)="onSubmit()">
+                <label>Full Name</label>
+                <input type="text" placeholder="(minimum 3 characters)" [(ngModel)]="fullName" name="fullName" required minlength="3" #fullNameInput="ngModel" (ngModelChange)="onFullNameChange($event)">
+                <div *ngIf="fullNameInput.invalid && fullNameInput.touched" class="error-message">
+                    Full Name is required and should be at least 3 characters long
+                </div>
+                
+                <label>Address</label>
+                <input type="text" placeholder="(minimum 6 characters)" [(ngModel)]="address" name="address"  required minlength="6" #addressInput="ngModel" (ngModelChange)="onAddressChange($event)">
+                <div *ngIf="addressInput.invalid && addressInput.touched" class="error-message">
+                    Address is required and should be at least 6 characters long
+                </div>
+                
+                <label>Credit card number</label>
+                <input type="text" placeholder="(16-digit number)" [(ngModel)]="creditCardNumber" name="creditCardNumber" required minlength="16" maxlength="16" pattern="\d{16}" #creditCardInput="ngModel" (ngModelChange)="onCreditCardNumberChange($event)">
+                <div *ngIf="creditCardInput.invalid && creditCardInput.touched" class="error-message">
+                    Please provide 16 digits from your credit card
+                </div>
 
 
-            <button [disabled]="form.invalid">Submit</button>
-        </form>
-    </div>
+                <button [disabled]="form.invalid">Submit</button>
+            </form>
+        </div>
 </div>
