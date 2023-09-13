@@ -44,8 +44,6 @@ export class CartComponent implements OnInit {
     }); 
 }
 
-
-
   onSubmit(): void {
     if (this.product) {
       const totalPrice = this.product.price * this.quantity;
