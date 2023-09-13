@@ -1,15 +1,16 @@
 .page-container {
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* align to the top */
-    gap: 2rem; /* gives some space between the items */
-    flex-wrap: wrap; /* wrap items to the new line on smaller screens */
+    align-items: flex-start;
+    gap: 2rem; 
+    flex-wrap: wrap; 
     margin: 0 auto;
 }
   
 .items-wrapper {
     flex: 1 0 40%;
     max-width: 40%;
+    margin-top: 50px;
 }
 
 .items-container, .total-cost {
@@ -19,11 +20,32 @@
 }
 
 .items-container {
-    flex: 1 0 40%;
-    max-width: 20%;
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+}
+
+
+.item-box {
+    flex-basis: calc(33.33% - 20px);
     margin-bottom: 20px;
+    margin-right: 10px;
+    box-sizing: border-box;  
+    border: 1px solid #dcdcdc;
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    background-color: #fff;
+    padding: 16px;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.item-box:nth-child(3n) {
+    margin-right: 0;
+}
+
+.item-box:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
 }
 
 .items-container img {
@@ -46,8 +68,8 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 20px; /* you can adjust this for more or less space */
-    width: 300px; /* adjust this to fit your needs */
+    gap: 20px; 
+    width: 300px; 
     margin: 0 auto;
 }
 
