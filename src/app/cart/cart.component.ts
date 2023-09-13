@@ -5,6 +5,7 @@ import { ProductService } from 'src/service/product.service';
 import { Product } from 'src/models/Product';
 import { first } from 'rxjs/operators';
 import { ActivatedRoute } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-cart',
@@ -19,7 +20,8 @@ export class CartComponent implements OnInit {
 
   constructor (private cartService: CartService,
                private productService: ProductService,
-               private route: ActivatedRoute) {
+               private route: ActivatedRoute,
+               private toastr: ToastrService) {
     this.cartService.cart.subscribe(items => this.cartItems = items)
   }
 
@@ -46,10 +48,10 @@ export class CartComponent implements OnInit {
 
   onSubmit(): void {
     if (this.product) {
+      this.toastr.success('Product added to the cart!');
       const totalPrice = this.product.price * this.quantity;
       const cartItem = new CartItem(this.product, this.quantity, totalPrice);
       this.cartService.addToCart(cartItem);
-      this.cartService.logCartItems();
       this.productAdded.emit(this.product);
     }
   }
