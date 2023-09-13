@@ -40,8 +40,4 @@ export class CartService {
     this._cart.next([]);
   }
 
-  logCartItems(): void {
-    const currentCart = this._cart.value;
-    console.log('Items in the cart:', currentCart);
-  }
 }
