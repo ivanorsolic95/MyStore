@@ -34,9 +34,5 @@ export class ProductItemDetailComponent implements OnInit {
   goToProductList () {
     this.router.navigate(['/']);
   }
-
-  onProductAdded(product: Product): void {
-    window.alert(`Product ${product.name} added to the cart successfully!`);
-  }
-
+  
 }
