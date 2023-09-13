@@ -1,4 +1,10 @@
-# MyStore Project Overview
+# MyStore Project
+
+## Quick Start 🚀
+
+Visit the live app here: https://symphonious-pudding-7aeb51.netlify.app
+
+# Overview
 
 MyStore is an e-commerce application built with Angular that simulates an online shopping experience. It allows users to browse through a product catalog, add desired products to a shopping cart, and finalize their purchase through a checkout process.
 
