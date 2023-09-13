@@ -4,7 +4,7 @@
         <h2 class="detail-title">{{product.name}}</h2>
         <p class="detail-description">{{product.description}}</p>
         <p class="detail-price">{{'$' + product.price}}</p>
-        <app-cart [product]="product" (productAdded)="onProductAdded($event)"></app-cart>
+        <app-cart [product]="product"></app-cart>
         <button class="detail-button" (click)="goToProductList()">Back to Product List</button>
     </div>
 </div>
