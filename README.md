@@ -2,7 +2,7 @@
 
 ## Quick Start 🚀
 
-Visit the live app here: https://symphonious-pudding-7aeb51.netlify.app
+Visit the live app here: https://mystoreproject.netlify.app/
 
 # Overview
 
