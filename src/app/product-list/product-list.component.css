@@ -6,3 +6,9 @@
   max-width: 1200px;
   margin: 0 auto;
 }
+
+@media (min-width: 360px) {
+  .product-grid {
+    display: grid;
+  }
+}
