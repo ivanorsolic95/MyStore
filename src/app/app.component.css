@@ -30,3 +30,16 @@ h1 {
   background-color: #555;
   color: #fff;
 }
+
+@media (max-width: 767px) {
+  *{
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-links {
+    display: grid;
+    row-gap: 1ch;
+    font-size: 12px;
+  }
+}
