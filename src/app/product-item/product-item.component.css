@@ -37,3 +37,10 @@
   align-items: center;
 }
 
+@media (max-width: 767px) {
+  .product-image {
+    max-width: 100%;
+    min-width: 300px;
+    height: auto;
+  }
+}
