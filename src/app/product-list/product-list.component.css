@@ -1,8 +1,8 @@
 
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns */
-  gap: 100px; /* adjust this to control space between products */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 100px; 
   max-width: 1200px;
   margin: 0 auto;
 }
