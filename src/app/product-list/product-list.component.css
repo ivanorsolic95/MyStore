@@ -7,8 +7,9 @@
   margin: 0 auto;
 }
 
-@media (min-width: 360px) {
+@media (max-width: 767px) {
   .product-grid {
-    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px; 
   }
 }
