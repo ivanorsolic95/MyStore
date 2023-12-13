@@ -49,9 +49,10 @@
 
 @media (max-width: 767px) {
     .detail-container {
-        padding: 10px;
+        margin: 10px;
       }
       .detail-image {
-        width: 100%;
+        width: 60%;
+        translate: 15%;
       }
 }
