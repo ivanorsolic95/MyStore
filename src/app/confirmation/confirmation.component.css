@@ -25,6 +25,10 @@
 
 
 .item-box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 40em;
     box-sizing: border-box;  
     border: 1px solid #dcdcdc;
     border-radius: 8px; 
@@ -44,8 +48,8 @@
 }
 
 .items-container img {
-    width: 150px;
-    height: 250px;
+    width: 10em;
+    height: 15em;
     margin-right: 20px;
 }
 
@@ -132,7 +136,8 @@
 }
 
 .item-details button {
-    padding: 8px 12px; 
+    width: 10em;
+    padding: 0.5em; 
     background-color: #f44336; 
     color: #ffffff; 
     border: none; 
