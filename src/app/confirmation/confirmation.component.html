@@ -17,10 +17,7 @@
                     <button (click)="removeItem(item.product.id)">Remove</button>
                 </div>
             </div>
-        </div>
-        <div *ngIf="cartItems.length > 0" class="total-cost">
-            <p>Total cost: ${{calculateTotalCost()}}</p>
-        </div>
+        </div>       
     </div>
     
         <div class="form-container" *ngIf="cartItems.length > 0">
@@ -41,6 +38,10 @@
                 <input type="text" placeholder="(16-digit number)" [(ngModel)]="creditCardNumber" name="creditCardNumber" required minlength="16" maxlength="16" pattern="\d{16}" #creditCardInput="ngModel" (ngModelChange)="onCreditCardNumberChange($event)">
                 <div *ngIf="creditCardInput.invalid && creditCardInput.touched" class="error-message">
                     Please provide 16 digits from your credit card
+                </div>
+
+                <div *ngIf="cartItems.length > 0" class="total-cost">
+                    <p>Total cost: ${{calculateTotalCost()}}</p>
                 </div>
 
 
