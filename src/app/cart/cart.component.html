@@ -1,5 +1,5 @@
 <form #cartForm="ngForm" (ngSubmit)="onSubmit()">
-    <select class="custom-select" [(ngModel)]="quantity" name="quantity" (ngModelChange)="validateQuantity($event)">
+    <select id="quantity-0" name="quantity-0" class="block max-w-full rounded-md border border-gray-300 py-1.5 text-left text-base font-medium leading-5 text-gray-700 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm" style="font-size: 1rem;" [(ngModel)]="quantity" name="quantity" (ngModelChange)="validateQuantity($event)">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -11,6 +11,8 @@
         <option value="9">9</option>
         <option value="10">10</option>
     </select>
-    <button class="add-to-cart-button">Add to cart</button>
+    <div class="mt-1">
+      <button type="submit" class="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50">Add to bag</button>
+    </div>
 </form>
 
