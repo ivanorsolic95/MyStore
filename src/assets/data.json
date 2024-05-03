@@ -4,41 +4,63 @@
     "name": "Book",
     "price": 9.99,
     "url": "https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    "description": "You can read it!"
+    "description": "You can read it!",
+    "details": "Milk and Honey is a poetry and prose collection by Rupi Kaur, published by Andrews McMeel Publishing in 2015. The book is divided into four chapters, each dealing with a different aspect of pain and healing. It explores themes of survival, violence, abuse, love, loss, and femininity. The collection features Rupi Kaur's own sketches and has been described as a must-have for women's nightstands or coffee tables."
   },
   {
     "id": 2,
     "name": "Headphones",
     "price": 249.99,
     "url": "https://images.unsplash.com/photo-1583394838336-acd977736f90?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    "description": "Listen to stuff!"
+    "description": "Listen to stuff!",
+    "details":"Over-ear headphones, also known as around-ear headphones, are a popular type of headphones that feature ear cups that go around the whole ear and form a seal to block out other sounds. They are known for their passive and active noise cancellation capabilities, which make them more comfortable for a wider range of people. Some over-ear headphones also offer features like Bluetooth connectivity, noise-canceling technology, and various sound modes."
   },
   {
     "id": 3,
     "name": "Backpack",
     "price": 79.99,
     "url": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    "description": "Carry things around town!"
+    "description": "Carry things around town!",
+    "details":"A regular backpack is a versatile and practical item that can be used for various purposes, such as carrying books, laptops, and personal items. It is designed to be lightweight and comfortable to wear, with adjustable shoulder straps and multiple compartments for organization."
   },
   {
     "id": 4,
     "name": "Glasses",
     "price": 129.99,
     "url": "https://images.unsplash.com/photo-1591076482161-42ce6da69f67?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    "description": "Now you can see!"
+    "description": "Now you can see!",
+    "details":"Introducing our high-quality diopter glasses, designed to cater to your unique vision needs. Diopter glasses are essential for individuals with varying degrees of myopia, hyperopia, astigmatism, and presbyopia. They help correct vision issues by focusing light precisely on the retina, ensuring sharp vision."
   },
   {
     "id": 5,
     "name": "Cup",
     "price": 4.99,
     "url": "https://images.unsplash.com/photo-1517256064527-09c73fc73e38?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    "description": "Drink anything with it!"
+    "description": "Drink anything with it!",
+    "details": "Introducing our high-quality cup, designed to elevate your daily routine. With a variety of customization options, you can find a cup that perfectly suits your taste and personality. From choosing the shape and size to selecting the glaze color or pattern, you can create a cup that reflects your unique preferences. Our cups offer a wide range of styles, from minimalist designs to vibrant and bold aesthetics, and even rustic and earthy looks."
   },
   {
     "id": 6,
     "name": "Shirt",
     "price": 29.99,
     "url": "https://images.unsplash.com/photo-1581655353564-df123a1eb820?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&q=80",
-    "description": "Wear it with style!"
+    "description": "Wear it with style!",
+    "details": "Introducing our stylish and comfortable T-shirt. With a variety of designs and colors available, there's a T-shirt for every occasion. Our T-shirts are made from high-quality materials that ensure comfort and durability. Choose from a variety of fits to find the perfect match for your body type. Upgrade your wardrobe with our high-quality T-shirts. Experience the perfect blend of comfort and style."
+  },
+  {
+    "id": 7,
+    "name": "Watch",
+    "price": 219.99,
+    "url": "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?w=800&auto=format&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8d3Jpc3QlMjB3YXRjaHxlbnwwfHwwfHx8MA%3D%3D",
+    "description": "Your best choice!",
+    "details": "Introducing our premium watch, designed to complement your style and add sophistication to your everyday look. This watch is not just a timepiece, but a statement of elegance and class. With its sleek design and durable construction, it's built to last. The watch face is easy to read, ensuring you never miss a beat."
+  },
+  {
+    "id": 8,
+    "name": "Bowl",
+    "price": 7.99,
+    "url": "https://images.unsplash.com/photo-1601859785003-1b9760be7cd3?w=800&auto=format&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzR8fGJvd2x8ZW58MHx8MHx8fDA%3D",
+    "description": "Use it for breakfast!",
+    "details": "Introducing our high-quality, versatile bowl. Perfect for any meal or occasion, it's designed to last with a durable construction. Its capacity allows for various uses, from baking to mixing ingredients. Expand your culinary creativity with optional attachments, such as food grinders and pasta makers. Experience the ease and efficiency of our bowl-lift stand mixer, ensuring a seamless cooking process."
   }
 ]
