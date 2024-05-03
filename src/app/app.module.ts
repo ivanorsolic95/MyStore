@@ -16,6 +16,8 @@ import { ProductItemDetailComponent } from './product-item-detail/product-item-d
 import { CartComponent } from './cart/cart.component';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
 import { ConfirmationMessageComponent } from './confirmation-message/confirmation-message.component';
+import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { ConfirmationMessageComponent } from './confirmation-message/confirmatio
     ProductItemDetailComponent,
     CartComponent,
     ConfirmationComponent,
-    ConfirmationMessageComponent
+    ConfirmationMessageComponent,
+    FooterComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserAnimationsModule,
