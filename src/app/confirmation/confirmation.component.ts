@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { CartItem } from 'src/models/CartItem';
 import { CartService } from 'src/service/cart.service';
 import { ConfirmationService } from 'src/service/confirmation.service';
-import { Router } from '@angular/router';
+import { Router, NavigationStart, Event as RouterEvent } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-confirmation',
@@ -12,14 +13,35 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class ConfirmationComponent implements OnInit {
   cartItems: CartItem[] = []
-  fullName: string = '';
+  name: string = '';
+  lastName: string = '';
+  email: string = '';
   address: string = '';
-  creditCardNumber: string = '';
+  postalCode: string = '';
+  phoneNumber: string = '';
+  city: string = '';
+  paymentMethod: string = '';
+  creditCard: string = '';
+  nameOnCard: string = '';
+  expirationDate: string = '';
+  cvc: string = '';
 
   constructor (private cartService: CartService,
                private confirmationService: ConfirmationService,
                private router: Router,
-               private toastr: ToastrService) {}
+               private toastr: ToastrService) 
+  
+  {
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationStart)
+    ).subscribe((event: RouterEvent) => {
+      if (event instanceof NavigationStart) {
+        if (!event.url.includes('message')) {
+          this.cartService.emptyCart();
+        }
+      }
+    });
+  }
 
   ngOnInit(): void {
     this.cartService.cart.subscribe(items => this.cartItems = items)
@@ -30,6 +52,12 @@ export class ConfirmationComponent implements OnInit {
     return total.toFixed(2);
   }
 
+  additionalcost(): number {
+    let baseCost = parseFloat(this.calculateTotalCost());
+    let additionalCost = baseCost + 5;
+    return parseFloat(additionalCost.toFixed(2));
+  }
+
   removeItem(productId: number): void {
     this.cartService.removeFromCart(productId);
     this.toastr.warning('Product removed from the cart!');
@@ -37,28 +65,17 @@ export class ConfirmationComponent implements OnInit {
 
 
   onSubmit(): void {
-    if (!this.fullName || this.fullName.length < 3 || 
-        !this.address || this.address.length < 6) {
-      alert('Please fill in all required fields with valid information.');
-      return;
+    if (!this.name || !this.lastName || !this.email || !this.paymentMethod || !this.address || !this.city || !this.postalCode || !this.phoneNumber || (this.paymentMethod === 'Credit card' && (!this.nameOnCard || !this.creditCard || !this.expirationDate || !this.cvc))) {
+    alert('Please fill in all required fields with valid information.');
+    return;
     }
-    
-    this.confirmationService.setFullName(this.fullName);
-    this.cartService.emptyCart();
-    this.router.navigate(['message']);
-    
-  }
-
-  onFullNameChange(newName: string): void {
-    console.log(`Full Name has been updated to: ${newName}`);
-  }
-  
-  onAddressChange(newAddress: string): void {
-    console.log(`Address has been updated to: ${newAddress}`);
-  }
-  
-  onCreditCardNumberChange(newNumber: string): void {
-    console.log(`Credit Card Number has been updated to: ${newNumber}`);
-  }
-    
+    this.confirmationService.setName(this.name);
+    this.confirmationService.setLastName(this.lastName);
+    this.confirmationService.setAddress(this.address);
+    this.confirmationService.setPostalCode(this.postalCode);
+    this.confirmationService.setCity(this.city);
+    this.confirmationService.setPaymentMethod(this.paymentMethod);
+    this.confirmationService.setCreditCard(this.creditCard);
+    this.router.navigate(['message'])
+  }    
 }
