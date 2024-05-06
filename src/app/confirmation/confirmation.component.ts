@@ -12,6 +12,7 @@ import { filter } from 'rxjs/operators';
   styleUrls: ['./confirmation.component.css']
 })
 export class ConfirmationComponent implements OnInit {
+  private currentUrl: string;
   cartItems: CartItem[] = []
   name: string = '';
   lastName: string = '';
@@ -32,13 +33,16 @@ export class ConfirmationComponent implements OnInit {
                private toastr: ToastrService) 
   
   {
+    this.currentUrl = this.router.url;
+
     this.router.events.pipe(
       filter(event => event instanceof NavigationStart)
     ).subscribe((event: RouterEvent) => {
       if (event instanceof NavigationStart) {
-        if (!event.url.includes('message')) {
+        if (this.currentUrl === '/message' && event.url !== '/message') {
           this.cartService.emptyCart();
         }
+        this.currentUrl = event.url;
       }
     });
   }
@@ -76,6 +80,6 @@ export class ConfirmationComponent implements OnInit {
     this.confirmationService.setCity(this.city);
     this.confirmationService.setPaymentMethod(this.paymentMethod);
     this.confirmationService.setCreditCard(this.creditCard);
-    this.router.navigate(['message'])
+    this.router.navigate(['message']);
   }    
 }
